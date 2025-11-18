@@ -1,0 +1,3 @@
+# Goals & Scope
+
+The Registry aims to...

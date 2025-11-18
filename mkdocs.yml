@@ -1,0 +1,77 @@
+site_name: Heritage Samples Registry
+site_description: >
+  Documentation for the emerging International Heritage Sample Registry,
+  including IGSN guidance, schema extensions, and contributor instructions.
+site_url: https://heritagesamples.org/
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - content.tabs.link
+    - content.code.copy
+    - search.highlight
+    - search.share
+    - toc.integrate
+
+  # Placeholder for future branding
+  # logo: images/hs-logo.svg
+  # favicon: images/favicon.png
+  # palette:
+  #   - scheme: default
+  #     primary: indigo
+  #     accent: amber
+
+nav:
+  - Welcome: index.md
+
+  - About:
+      - About the Registry: about/about-registry.md
+      - Goals & Scope: about/goals-scope.md
+
+  - IGSNs:
+      - What is an IGSN?: igsn/what-is-igsn.md
+      - How we use IGSNs: igsn/how-we-use-igsn.md
+
+  - Schema:
+      - Overview: schema/overview.md
+      - Heritage Sample Schema: schema/heritage-sample-schema.md
+
+  - Instructions:
+      - Submitting samples: instructions/submitting-samples.md
+      - Institutional setup & integration: instructions/institutional-setup.md
+
+  - Consortium:
+      - Supporting institutions: consortium/supporting-institutions.md
+      - How to join: consortium/how-to-join.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - def_list
+  - footnotes
+  - tables
+  - attr_list
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+  # Mermaid diagrams
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
