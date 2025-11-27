@@ -8,6 +8,47 @@ Developed within the framework of [**E-RIHS (European Research Infrastructure fo
 
 The registry will form the foundation for **digital twin representations** of heritage samples, providing a persistent link between the physical sample and its digital surrogates, including analytical data and related documentation held elsewhere.
 
+```mermaid
+---
+config:
+  layout: fixed
+---
+flowchart LR
+    A@{ label: "<img src=\"https://heritagesamples.github.io/heritagesamples.org/images/sample_vial.jpg\" width=\"64\"><br>Physical Heritage Sample" } --> HSR@{ label: "<img src=\"https://heritagesamples.github.io/heritagesamples.org/images/hs-logo_v1.3-dark.png\" width=\"72\"><br>Heritage Samples Registry<br>IGSN–DOI Assignment" }
+    HSR --> B@{ label: "<img src=\"https://heritagesamples.github.io/heritagesamples.org/images/metadata-card.png\" width=\"64\"><br>Minimal Core Metadata Record" } & IGSN@{ label: "<img src=\"https://heritagesamples.github.io/heritagesamples.org/images/igsn.jpg\" width=\"64\"><br>IGSN-DOI Identifier" }
+    IGSN --> DOI@{ label: "<img src=\"https://upload.wikimedia.org/wikipedia/commons/1/11/DOI_logo.svg\" width=\"64\"><br>DOI Infrastructure" }
+    B --> IGSN
+    C@{ label: "<img src=\"https://heritagesamples.github.io/heritagesamples.org/images/data.png\" width=\"64\"><br>External Data<br>Images, Analysis, Documentation" } -. references .-> IGSN
+    D@{ label: "<img src=\"https://heritagesamples.github.io/heritagesamples.org/images/publications.png\" width=\"64\"><br>Publications &amp; Reports" } -. references .-> IGSN
+    E@{ label: "<img src=\"https://heritagesamples.github.io/heritagesamples.org/images/DigitalTwin.png\" width=\"64\"><br>Digital Twin Representations" } -. references .-> IGSN
+    C -. may also have .-> DOI
+    D -. may also have .-> DOI
+    E -. may also have .-> DOI
+
+    A@{ shape: rect}
+    HSR@{ shape: rect}
+    B@{ shape: rect}
+    IGSN@{ shape: rect}
+    DOI@{ shape: rect}
+    C@{ shape: rect}
+    D@{ shape: rect}
+    E@{ shape: rect}
+     A:::object
+     HSR:::digital2
+     B:::dims2
+     IGSN:::name2
+     DOI:::digital2
+     C:::infoobj
+     D:::document
+     E:::infoobj
+    classDef object stroke:#2C5D98,fill:#2C5D98,color:white,rx:5px,ry:5px,font-size:18px,font-weight:bold
+    classDef digital2 stroke:#999,fill:#eee,color:black,rx:5px,ry:5px,font-size:18px,font-weight:bold
+    classDef name2 stroke:orange,fill:#FEF3BA,color:black,rx:20px,ry:20px,font-size:18px,font-weight:bold
+    classDef infoobj stroke:#907010,fill:#fffa40,color:black,rx:20px,ry:20px,font-size:18px,font-weight:bold
+    classDef document stroke:#2C5D98,fill:#33B0FF,color:#2C5D98,rx:5px,ry:5px,font-size:18px,font-weight:bold
+    classDef dims2 stroke:black,fill:#c6c6c6,color:black,rx:20px,ry:20px,font-size:18px,font-weight:bold
+```
+
 ## **Purpose and Rationale** 
 
 Heritage science increasingly depends on access to data from small but significant physical samples that are analysed, reused, and reinterpreted across institutions and decades of research. Despite their importance, these samples often lack consistent public identifiers, making it difficult to trace their provenance, usage, or analytical history. 
