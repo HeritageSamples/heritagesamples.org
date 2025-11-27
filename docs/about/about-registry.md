@@ -41,7 +41,7 @@ flowchart LR
      C:::infoobj
      D:::document
      E:::infoobj
-    classDef object stroke:#2C5D98,fill:#2C5D98,color:white,rx:5px,ry:5px,font-size:18px,font-weight:bold
+    classDef object stroke:#2C5D98,fill:#2C5D98,color:#FFFFFF,rx:5px,ry:5px,font-size:18px,font-weight:bold
     classDef digital2 stroke:#999,fill:#eee,color:black,rx:5px,ry:5px,font-size:18px,font-weight:bold
     classDef name2 stroke:orange,fill:#FEF3BA,color:black,rx:20px,ry:20px,font-size:18px,font-weight:bold
     classDef infoobj stroke:#907010,fill:#fffa40,color:black,rx:20px,ry:20px,font-size:18px,font-weight:bold
