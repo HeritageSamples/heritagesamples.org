@@ -86,6 +86,6 @@ This project was setup as part of the work of the following projects:
 
 ### [NFDI4Objects](https://www.nfdi4objects.net/) project
 
-[<img width="256px" src="https://community.nfdi4objects.net/?locale=en" alt="NFDI4Objects Logo">](https://www.nfdi4objects.net/)<br/>
+[<img width="256px" src="https://community.nfdi4objects.net/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOMlo0Y0hoNmJ6QTFPR051Y0RNMWVHaHRZMjV5WkcxeU9IVXpad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpBeVgxWmxjbXhoZFdaZlEyeGhhVzFmYTNWeWVsODFNREJ3ZUM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KekF5WDFabGNteGhkV1pmUTJ4aGFXMWZhM1Z5ZWw4MU1EQndlQzV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjUtMTItMTFUMTI6MDM6NDguODY1WiIsInB1ciI6ImJsb2Jfa2V5In19--175586c9ac556ae1110cac1824c16add3be43134/02_Verlauf_Claim_kurz_500px.png" alt="NFDI4Objects Logo">](https://www.nfdi4objects.net/)<br/>
 
 - [NFDI4Objects is funded by Deutsche Forschungsgemeinschaft (DFG) as a consortium of the national research data infrastructure (NFDI) in Germany, project number](https://gepris.dfg.de/gepris/projekt/501836407?context=projekt&task=showDetail&id=50183640)
