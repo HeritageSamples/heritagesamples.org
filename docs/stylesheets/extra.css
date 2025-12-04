@@ -20,7 +20,15 @@
   --md-accent-fg-color--transparent: rgba(251, 187, 17, 0.25);
 }
 
-.md-typeset a {
-  text-decoration: underline;
-  color:rgb(61, 111, 213);
+/* H1 */
+.md-content h1 {
+}
+
+/* H2 */
+.md-content h2 {
+  margin-top: 0em;
+}
+/* H3 */
+.md-content h3 {
+  margin-top: 0em;
 }
