@@ -86,6 +86,6 @@ This project was setup as part of the work of the following projects:
 
 ### [NFDI4Objects](https://www.nfdi4objects.net/) project
 
-[<img width="256px" src="https://community.nfdi4objects.net/?locale=en" alt="NFDI4Objects Logo">](https://rdm.kikirpa.be/projects/h-search/)<br/>
+[<img width="256px" src="https://community.nfdi4objects.net/?locale=en" alt="NFDI4Objects Logo">](https://www.nfdi4objects.net/)<br/>
 
 - [NFDI4Objects is funded by Deutsche Forschungsgemeinschaft (DFG) as a consortium of the national research data infrastructure (NFDI) in Germany, project number](https://gepris.dfg.de/gepris/projekt/501836407?context=projekt&task=showDetail&id=50183640)
