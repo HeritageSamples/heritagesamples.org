@@ -6,6 +6,7 @@ site_url: https://heritagesamples.github.io/heritagesamples.org/
 
 theme:
   name: material
+  custom_dir: overrides  # Required for home.html to work
   language: en
   logo: images/hs-logo_v1.3-light.png  
   favicon: images/favicon.png
@@ -42,7 +43,9 @@ theme:
   #     accent: amber
 
 nav:
-  - Welcome: index.md
+  - Home: index.md
+
+  - Welcome: welcome.md
 
   - About:
       - About the Registry: about/about-registry.md

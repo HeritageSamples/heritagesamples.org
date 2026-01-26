@@ -1,0 +1,67 @@
+{% extends "main.html" %}
+
+<!-- Load extra styles for homepage -->
+{% block styles %}
+  {{ super() }}
+  <style>
+    /* Make header static, hide sidebars/content for clean hero */
+    .md-header { position: initial; }
+    .md-main__inner { margin: 0; }
+    .md-content { display: none; }
+    
+    /* Hide sidebars completely */
+    @media screen and (min-width: 60em) {
+      .md-sidebar--secondary { display: none !important; }
+    }
+    @media screen and (min-width: 76.25em) {
+      .md-sidebar--primary { display: none !important; }
+    }
+
+    /* Hero styling */
+    .mdx-hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .mdx-hero__content h1 { 
+      font-size: 3.5rem; 
+      margin-bottom: 1rem;
+      color: var(--md-primary-fg-color);
+    }
+    .mdx-hero__content p { 
+      font-size: 1.25rem; 
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      opacity: 0.9;
+    }
+  </style>
+{% endblock %}
+
+<!-- Render hero ABOVE tabs/nav -->
+{% block tabs %}
+  {{ super() }}
+  
+  <section class="mdx-container">
+    <div class="md-grid md-typeset">
+      <div class="mdx-hero">
+        <div class="mdx-hero__content">
+          <h1>Heritage Samples Registry</h1>
+          <p>Persistent identification, discovery, and sharing of heritage samples in heritage science.</p>
+          <a href="welcome" class="md-button md-button--primary">
+            Learn More
+          </a>
+          <a href="https://github.com/HeritageSamples/heritagesamples.org/issues" class="md-button">
+            Get Involved
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+<!-- Hide main content & footer -->
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}
