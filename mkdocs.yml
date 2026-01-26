@@ -2,7 +2,7 @@ site_name: Heritage Samples Registry
 site_description: >
   Documentation for the emerging International Heritage Sample Registry,
   including IGSN guidance, schema extensions, and contributor instructions.
-site_url: https://heritagesamples.github.io/heritagesamples.org/
+site_url: https://heritagesamples.org/
 
 theme:
   name: material
