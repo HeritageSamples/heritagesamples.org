@@ -36,57 +36,58 @@
   margin: 0 auto;
 }
 
-/* =========
-   Title + logo + tagline (single logo element that swaps per theme)
-   ========= */
+/* ===== Title: logo + H1 on one line, tagline below both ===== */
+
 .hs-title{
   width: 100%;
   margin: 0 auto 1rem;
+  text-align: center;
 }
 
+/* Row holds logo + H1, and controls scaling */
 .hs-title-row{
-  display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
-  justify-content: center;
+  display: inline-flex;         /* shrink-wrap row, keeps it tidy */
+  align-items: center;
+  gap: 0.6em;
+  font-size: 1.25em;            /* your preferred scale */
+  margin-bottom: 0.25em;        /* your preferred spacing to tagline */
+  line-height: 1.05;
 }
 
-/* Single logo box uses background-image (no double image / no gaps) */
+/* Override Material's .md-typeset h1 { font-size: 2em } by inheriting */
+.md-typeset .hs-title-h1{
+  margin: 0;
+  font-size: inherit !important; /* ensures row controls the size */
+  line-height: inherit;
+  color: var(--md-primary-fg-color);
+}
+
+/* One logo element; size follows the row */
 .hs-logo{
   display: inline-block;
-  width: 1.15em;
-  height: 1.15em;
-  flex: 0 0 auto;
+  width: 1.05em;
+  height: 1.05em;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  transform: translateY(0.08em);
-  background-image: url("{{ 'images/hs-logo.svg' | url }}"); /* light scheme logo */
+  background-image: url("{{ 'images/hs-logo.svg' | url }}"); /* light */
 }
 
-/* Dark scheme swap (you confirmed "slate") */
-html[data-md-color-scheme="slate"] .hs-logo{
-  background-image: url("{{ 'images/hs-logo-light.svg' | url }}");
+/* Your scheme attribute is on <body>, so select body */
+body[data-md-color-scheme="slate"] .hs-logo{
+  background-image: url("{{ 'images/hs-logo-light.svg' | url }}"); /* dark */
 }
 
-/* H1: smooth scaling */
-.hs-title-h1{
-  margin: 0;
-  line-height: 1.05;
-  color: var(--md-primary-fg-color);
-  font-size: clamp(2.1rem, 3.4vw, 3.5rem);
-}
-
-/* Tagline below logo+title, bold and same colour as title */
+/* Tagline below logo+title */
 .hs-tagline{
-  margin: .5rem auto 0;
+  margin: 0 auto;
   max-width: 70ch;
   font-weight: 700;
   color: var(--md-primary-fg-color);
-  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
-  opacity: 1;
-  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.35;
 }
+
 
 /* =========
    Rotating banner
