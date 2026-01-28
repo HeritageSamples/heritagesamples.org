@@ -24,6 +24,8 @@
       justify-content: center;
       text-align: center;
       padding: 2rem;
+  align-items: flex-start;
+  padding-top: 3rem;
     }
 
     .mdx-hero__content h1 {
@@ -77,6 +79,52 @@
       text-shadow: 0 2px 10px rgba(0,0,0,.45);
     }
 
+.hs-hero {
+  width: 100%;
+  max-width: 1100px;   /* matches banner */
+  margin: 0 auto;
+  text-align: left;    /* key change */
+}
+
+/* Title + logo */
+.hs-title {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center; /* overall block centred */
+  margin-bottom: 1rem;
+}
+
+.hs-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.hs-title-text h1 {
+  margin: 0;
+  line-height: 1.05;
+}
+
+.hs-tagline {
+  margin: .35rem 0 0;
+  font-size: 1.15rem;
+  opacity: .9;
+  max-width: 70ch;
+}
+
+/* Copy column */
+.hs-copy {
+  max-width: 90ch;
+  margin: 0 auto;     /* centred column */
+}
+
+.hs-copy p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
     /* Optional: keep buttons nicely spaced on small screens */
     .hs-button-row {
       display: flex;
@@ -85,6 +133,56 @@
       flex-wrap: wrap;
       margin-top: 1.25rem;
     }
+
+.hs-button--ghost {
+  background: transparent !important;
+  border: 1px solid currentColor;
+}
+
+/* Mobile stacking */
+@media (max-width: 700px) {
+  .hs-title {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hs-hero {
+    text-align: center;
+  }
+  .hs-copy {
+    text-align: left; /* keep paragraphs readable even on mobile */
+  }
+  
+  /* Logo sizing */
+.hs-logo{
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+/* Default: show the black logo, hide the white logo */
+.hs-logo--dark { display: none; }
+.hs-logo--light { display: block; }
+
+/* When Material is in dark mode ("slate" is the usual name), swap */
+html[data-md-color-scheme="slate"] .hs-logo--light { display: none; }
+html[data-md-color-scheme="slate"] .hs-logo--dark  { display: block; }
+
+/* Tagline: bold and same colour as the H1 */
+.hs-tagline{
+  margin: .35rem 0 0;
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+  font-size: 1.15rem;
+  opacity: 1;         /* don’t fade if you want it to match the H1 strongly */
+  max-width: 70ch;
+}
+
+/* H1 colour already uses --md-primary-fg-color in your CSS; keep it consistent */
+.mdx-hero__content h1{
+  color: var(--md-primary-fg-color);
+}
+
   </style>
 {% endblock %}
 
@@ -94,41 +192,69 @@
   <section class="mdx-container">
     <div class="md-grid md-typeset">
       <div class="mdx-hero">
-        <div class="mdx-hero__content">
-          <h1>Heritage Samples Registry</h1>
+  <div class="mdx-hero__content hs-hero">
 
-          <!-- Rotating banner -->
-          <div class="hs-banner" id="hsBanner"
-               data-banner-dir="{{ 'images/banner/' | url }}"
-               data-captions-url="{{ 'images/banner/captions.csv' | url }}"
-               data-interval-ms="9000"
-               data-fade-ms="1200">
-            <div class="hs-banner__layer is-visible" id="hsBannerA"></div>
-            <div class="hs-banner__layer" id="hsBannerB"></div>
-            <div class="hs-banner__caption" id="hsBannerCaption">Loading…</div>
-          </div>
+    <!-- Title row: logo + H1 -->
+    <div class="hs-title">
+  <img class="hs-logo hs-logo--light" src="{{ 'images/hs-logo.svg' | url }}" alt="Heritage Samples Registry logo" />
+  <img class="hs-logo hs-logo--dark"  src="{{ 'images/hs-logo-light.svg' | url }}" alt="Heritage Samples Registry logo" />
 
-          <p>Persistent identification, discovery, and sharing of heritage samples in heritage science.</p>
+  <div class="hs-title-text">
+    <h1>Heritage Samples Registry</h1>
+    <p class="hs-tagline">Persistent identification, discovery, and sharing of heritage samples in heritage science.</p>
+  </div>
+</div>
 
-          <p>
-            The <b>Heritage Samples Registry</b> is an emerging international initiative to support the persistent
-            identification, discovery, and sharing of information about material samples in the context of heritage
-            science. These samples, including paint cross-sections, material fragments, reference standards, and other
-            physical specimens, are valuable research assets that underpin heritage science, conservation, and more
-            general research worldwide.
-          </p>
+    <!-- Banner -->
+    <div class="hs-banner" id="hsBanner"
+         data-banner-dir="{{ 'images/banner/' | url }}"
+         data-captions-url="{{ 'images/banner/captions.csv' | url }}"
+         data-interval-ms="9000"
+         data-fade-ms="1200">
+      <div class="hs-banner__layer is-visible" id="hsBannerA"></div>
+      <div class="hs-banner__layer" id="hsBannerB"></div>
+      <div class="hs-banner__caption" id="hsBannerCaption">Loading…</div>
+    </div>
 
-          <p>
-            The Registry aims to make the existence of these samples <b>findable, citable, and consistently documented</b>,
-            enabling researchers and institutions to connect local sample records with global research outputs.
-          </p>
+    <!-- Body copy in a readable column -->
+    <div class="hs-copy">
+      <p>
+        The <b>Heritage Samples Registry</b> is an emerging international initiative to support the persistent
+        identification, discovery, and sharing of information about material samples in the context of heritage
+        science. These samples, including paint cross-sections, material fragments, reference standards, and other
+        physical specimens, are valuable research assets that underpin heritage science, conservation, and more
+        general research worldwide.
+      </p>
 
-          <div class="hs-button-row">
-            <a href="welcome" class="md-button md-button--primary">Learn More</a>
-            <a href="https://github.com/HeritageSamples/heritagesamples.org/issues" class="md-button">Get Involved</a>
-          </div>
-        </div>
-      </div>
+      <p>
+        The Registry aims to make the existence of these samples <b>findable, citable, and consistently documented</b>,
+        enabling researchers and institutions to connect local sample records with global research outputs.
+      </p>
+    </div>
+
+    <!-- CTAs -->
+    <div class="hs-button-row">
+      <a href="welcome" class="md-button md-button--primary">Learn More</a>
+      <a href="https://github.com/HeritageSamples/heritagesamples.org/issues" class="md-button">Get Involved</a>
+      <!-- Optional extras (demoted) -->
+      <a href="registry" class="md-button hs-button--ghost">Search Registry</a>
+      <a href="docs" class="md-button hs-button--ghost">Documentation</a>
+    </div>
+
+    <!-- If you need more than ~4 actions, switch to quick links -->
+    <!--
+    <p class="hs-quicklinks">
+      Quick links:
+      <a href="registry">Search</a> ·
+      <a href="schemas">Schemas</a> ·
+      <a href="partners">Partners</a> ·
+      <a href="contact">Contact</a>
+    </p>
+    -->
+
+  </div>
+</div>
+
     </div>
   </section>
 
