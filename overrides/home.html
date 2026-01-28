@@ -3,184 +3,180 @@
 {% block styles %}
   {{ super() }}
   <style>
-    /* Make header static, hide sidebars/content for clean hero */
-    .md-header { position: initial; }
-    .md-main__inner { margin: 0; }
-    .md-content { display: none; }
+/* =========
+   Layout reset for hero-only homepage
+   ========= */
+.md-header { position: initial; }
+.md-main__inner { margin: 0; }
+.md-content { display: none; }
 
-    /* Hide sidebars completely */
-    @media screen and (min-width: 60em) {
-      .md-sidebar--secondary { display: none !important; }
-    }
-    @media screen and (min-width: 76.25em) {
-      .md-sidebar--primary { display: none !important; }
-    }
+/* Hide sidebars completely */
+@media screen and (min-width: 60em) {
+  .md-sidebar--secondary { display: none !important; }
+}
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary { display: none !important; }
+}
 
-    /* Hero styling */
-    .mdx-hero {
-      min-height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
+/* =========
+   Hero layout
+   ========= */
+.mdx-hero {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
   align-items: flex-start;
-  padding-top: 3rem;
-    }
-
-    .mdx-hero__content h1 {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-      color: var(--md-primary-fg-color);
-    }
-
-    .mdx-hero__content p {
-      font-size: 1.25rem;
-      max-width: 80vw;
-      margin: 0 auto 1.25rem;
-      opacity: 0.9;
-    }
-
-    /* Rotating banner */
-    .hs-banner {
-      position: relative;
-      width: 100%;
-      max-width: 1100px;
-      height: clamp(220px, 32vw, 420px);
-      margin: 1.25rem auto 1.75rem;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 10px 28px rgba(0,0,0,.18);
-      background: rgba(0,0,0,.06);
-    }
-
-    .hs-banner__layer {
-      position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      transition: opacity 1.2s ease-in-out;
-      will-change: opacity;
-    }
-    .hs-banner__layer.is-visible { opacity: 1; }
-
-    .hs-banner__caption {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      padding: .75rem 1rem;
-      font-size: .95rem;
-      line-height: 1.25rem;
-      text-align: left;
-      color: #fff;
-      background: linear-gradient(to top, rgba(0,0,0,.62), rgba(0,0,0,0));
-      text-shadow: 0 2px 10px rgba(0,0,0,.45);
-    }
+  padding: 3rem 2rem 2rem;
+  text-align: center; /* keep banner/buttons nicely centred */
+}
 
 .hs-hero {
   width: 100%;
-  max-width: 1100px;   /* matches banner */
+  max-width: 1100px; /* matches banner */
   margin: 0 auto;
-  text-align: left;    /* key change */
 }
 
-/* Title + logo */
-.hs-title {
+/* =========
+   Title + logo + tagline (single logo element that swaps per theme)
+   ========= */
+.hs-title{
+  width: 100%;
+  margin: 0 auto 1rem;
+}
+
+.hs-title-row{
   display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center; /* overall block centred */
-  margin-bottom: 1rem;
+  align-items: baseline;
+  gap: 0.75rem;
+  justify-content: center;
 }
 
-.hs-logo {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
+/* Single logo box uses background-image (no double image / no gaps) */
+.hs-logo{
+  display: inline-block;
+  width: 1.15em;
+  height: 1.15em;
+  flex: 0 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: translateY(0.08em);
+  background-image: url("{{ 'images/hs-logo.svg' | url }}"); /* light scheme logo */
 }
 
-.hs-title-text h1 {
+/* Dark scheme swap (you confirmed "slate") */
+html[data-md-color-scheme="slate"] .hs-logo{
+  background-image: url("{{ 'images/hs-logo-light.svg' | url }}");
+}
+
+/* H1: smooth scaling */
+.hs-title-h1{
   margin: 0;
   line-height: 1.05;
+  color: var(--md-primary-fg-color);
+  font-size: clamp(2.1rem, 3.4vw, 3.5rem);
 }
 
-.hs-tagline {
-  margin: .35rem 0 0;
-  font-size: 1.15rem;
-  opacity: .9;
+/* Tagline below logo+title, bold and same colour as title */
+.hs-tagline{
+  margin: .5rem auto 0;
   max-width: 70ch;
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+  opacity: 1;
+  text-align: center;
 }
 
-/* Copy column */
-.hs-copy {
-  max-width: 90ch;
-  margin: 0 auto;     /* centred column */
+/* =========
+   Rotating banner
+   ========= */
+.hs-banner {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  height: clamp(220px, 32vw, 420px);
+  margin: 1.25rem auto 1.75rem;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0,0,0,.18);
+  background: rgba(0,0,0,.06);
 }
 
-.hs-copy p {
+.hs-banner__layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  will-change: opacity;
+}
+.hs-banner__layer.is-visible { opacity: 1; }
+
+.hs-banner__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: .75rem 1rem;
+  font-size: .95rem;
+  line-height: 1.25rem;
+  text-align: left;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0,0,0,.62), rgba(0,0,0,0));
+  text-shadow: 0 2px 10px rgba(0,0,0,.45);
+}
+
+/* =========
+   Copy block (readable width; left-aligned text)
+   ========= */
+.hs-copy{
+  max-width: 105ch;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.hs-copy p{
   font-size: 1.1rem;
   line-height: 1.6;
   margin: 0 0 1rem;
+  opacity: 0.95;
 }
 
-    /* Optional: keep buttons nicely spaced on small screens */
-    .hs-button-row {
-      display: flex;
-      gap: .75rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 1.25rem;
-    }
+/* =========
+   Buttons
+   ========= */
+.hs-button-row{
+  display: flex;
+  gap: .75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+}
 
-.hs-button--ghost {
+.hs-button--ghost{
   background: transparent !important;
   border: 1px solid currentColor;
 }
 
-/* Mobile stacking */
+/* =========
+   Mobile tweaks
+   ========= */
 @media (max-width: 700px) {
-  .hs-title {
-    flex-direction: column;
-    text-align: center;
+  .mdx-hero{
+    padding: 2.25rem 1rem 1.5rem;
   }
-  .hs-hero {
-    text-align: center;
+
+  /* Allow title row to wrap nicely */
+  .hs-title-row{
+    flex-wrap: wrap;
   }
-  .hs-copy {
-    text-align: left; /* keep paragraphs readable even on mobile */
+
+  /* Keep paragraphs readable on mobile */
+  .hs-copy{
+    text-align: left;
   }
-  
-  /* Logo sizing */
-.hs-logo{
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
-  flex: 0 0 auto;
-}
-
-/* Default: show the black logo, hide the white logo */
-.hs-logo--dark { display: none; }
-.hs-logo--light { display: block; }
-
-/* When Material is in dark mode ("slate" is the usual name), swap */
-html[data-md-color-scheme="slate"] .hs-logo--light { display: none; }
-html[data-md-color-scheme="slate"] .hs-logo--dark  { display: block; }
-
-/* Tagline: bold and same colour as the H1 */
-.hs-tagline{
-  margin: .35rem 0 0;
-  font-weight: 700;
-  color: var(--md-primary-fg-color);
-  font-size: 1.15rem;
-  opacity: 1;         /* don’t fade if you want it to match the H1 strongly */
-  max-width: 70ch;
-}
-
-/* H1 colour already uses --md-primary-fg-color in your CSS; keep it consistent */
-.mdx-hero__content h1{
-  color: var(--md-primary-fg-color);
 }
 
   </style>
@@ -196,14 +192,16 @@ html[data-md-color-scheme="slate"] .hs-logo--dark  { display: block; }
 
     <!-- Title row: logo + H1 -->
     <div class="hs-title">
-  <img class="hs-logo hs-logo--light" src="{{ 'images/hs-logo.svg' | url }}" alt="Heritage Samples Registry logo" />
-  <img class="hs-logo hs-logo--dark"  src="{{ 'images/hs-logo-light.svg' | url }}" alt="Heritage Samples Registry logo" />
-
-  <div class="hs-title-text">
-    <h1>Heritage Samples Registry</h1>
-    <p class="hs-tagline">Persistent identification, discovery, and sharing of heritage samples in heritage science.</p>
+  <div class="hs-title-row">
+    <span class="hs-logo" aria-hidden="true"></span>
+    <h1 class="hs-title-h1">Heritage Samples Registry</h1>
   </div>
+
+  <p class="hs-tagline">
+    Persistent identification, discovery, and sharing of heritage samples in heritage science.
+  </p>
 </div>
+
 
     <!-- Banner -->
     <div class="hs-banner" id="hsBanner"
