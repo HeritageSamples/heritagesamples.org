@@ -49,7 +49,7 @@
   display: inline-flex;         /* shrink-wrap row, keeps it tidy */
   align-items: center;
   gap: 0.6em;
-  font-size: font-size: clamp(3.0em, 3.6vw, 3.45em);;            /* your preferred scale */
+  font-size: clamp(3.0em, 3.6vw, 3.75em);            /* your preferred scale */
   margin-bottom: 0.25em;        /* your preferred spacing to tagline */
   line-height: 1.05;
 }
@@ -171,12 +171,31 @@ body[data-md-color-scheme="slate"] .hs-logo{
 
   /* Allow title row to wrap nicely */
   .hs-title-row{
-    flex-wrap: wrap;
+    
+    flex-direction: column;
+    gap: 0.15em;
+    margin-bottom: 0.35em;
+    text-align: center;
   }
 
   /* Keep paragraphs readable on mobile */
   .hs-copy{
     text-align: left;
+  }
+  
+  /* Make the logo a bit larger when stacked */
+  .hs-logo{
+    width: 1.25em;
+    height: 1.25em;
+    transform: none; /* optional: remove baseline tweak */
+  }
+
+  .md-typeset .hs-title-h1{
+    text-align: center;
+  }
+
+  .hs-tagline{
+    text-align: center;
   }
 }
 
