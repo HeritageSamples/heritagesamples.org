@@ -43,18 +43,20 @@ theme:
   #     accent: amber
 
 nav:
-  - Home: index.md
-  
-
+  - Home: index.md  
   - About:
       - About the Registry: about/about-registry.md
-      - Welcome: about/wellcome.md
+      - What is an IGSN?: about/what-is-igsn.md
+      - How we use IGSNs: about/how-we-use-igsn.md
       - Goals & Scope: about/goals-scope.md
-
-  - IGSNs:
-      - What is an IGSN?: igsn/what-is-igsn.md
-      - How we use IGSNs: igsn/how-we-use-igsn.md
-
+      - Project Team & Acknowledgements: about/project-team.md
+  - Get Involved:
+      - Consortium Vision: get_involved/consortium-vision.md
+      - Who can benefit?: get_involved/who-can-benefit.md
+      - Register Your Interest: get_involved/register-interest.md
+      - Roadmap: get_involved/roadmap.md
+  - News & Updates: news.md
+  
   #- Schema:
   #    - Overview: schema/overview.md
   #    - Heritage Sample Schema: schema/heritage-sample-schema.md
@@ -62,10 +64,6 @@ nav:
   #- Instructions:
   #    - Submitting samples: instructions/submitting-samples.md
   #    - Institutional setup & integration: instructions/institutional-setup.md
-
-  - How to join:
-      - Supporting institutions: how_to_join/supporting-institutions.md
-      - How to join: how_to_join/how-to-join.md
 
 plugins:
   - search

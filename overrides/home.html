@@ -2,240 +2,52 @@
 
 {% block styles %}
   {{ super() }}
-  <style>
-/* =========
-   Layout reset for hero-only homepage
-   ========= */
-.md-header { position: initial; }
-.md-main__inner { margin: 0; }
-.md-content { display: none; }
-
-/* Hide sidebars completely */
-@media screen and (min-width: 60em) {
-  .md-sidebar--secondary { display: none !important; }
-}
-@media screen and (min-width: 76.25em) {
-  .md-sidebar--primary { display: none !important; }
-}
-
-/* =========
-   Hero layout
-   ========= */
-.mdx-hero {
-  min-height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 3rem 2rem 2rem;
-  text-align: center; /* keep banner/buttons nicely centred */
-}
-
-.hs-hero {
-  width: 100%;
-  max-width: 1100px; /* matches banner */
-  margin: 0 auto;
-}
-
-/* ===== Title: logo + H1 on one line, tagline below both ===== */
-
-.hs-title{
-  width: 100%;
-  margin: 0 auto 1rem;
-  text-align: center;
-}
-
-/* Row holds logo + H1, and controls scaling */
-.hs-title-row{
-  display: inline-flex;         /* shrink-wrap row, keeps it tidy */
-  align-items: center;
-  gap: 0.6em;
-  font-size: clamp(3.0em, 3.6vw, 3.75em);            /* your preferred scale */
-  margin-bottom: 0.25em;        /* your preferred spacing to tagline */
-  line-height: 1.05;
-}
-
-/* Override Material's .md-typeset h1 { font-size: 2em } by inheriting */
-.md-typeset .hs-title-h1{
-  margin: 0;
-  font-size: inherit !important; /* ensures row controls the size */
-  line-height: inherit;
-  color: var(--md-primary-fg-color);
-}
-
-/* One logo element; size follows the row */
-.hs-logo{
-  display: inline-block;
-  width: 1.05em;
-  height: 1.05em;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  background-image: url("{{ 'images/hs-logo.svg' | url }}"); /* light */
-}
-
-/* Your scheme attribute is on <body>, so select body */
-body[data-md-color-scheme="slate"] .hs-logo{
-  background-image: url("{{ 'images/hs-logo-light.svg' | url }}"); /* dark */
-}
-
-/* Tagline below logo+title */
-.hs-tagline{
-  margin: 0 auto;
-  max-width: 70ch;
-  font-weight: 700;
-  color: var(--md-primary-fg-color);
-  font-size: 1.05rem;
-  line-height: 1.35;
-}
-
-
-/* =========
-   Rotating banner
-   ========= */
-.hs-banner {
-  position: relative;
-  width: 100%;
-  max-width: 1100px;
-  height: clamp(220px, 32vw, 420px);
-  margin: 1.25rem auto 1.75rem;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 10px 28px rgba(0,0,0,.18);
-  background: rgba(0,0,0,.06);
-}
-
-.hs-banner__layer {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 1.2s ease-in-out;
-  will-change: opacity;
-}
-.hs-banner__layer.is-visible { opacity: 1; }
-
-.hs-banner__caption {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: .75rem 1rem;
-  font-size: .95rem;
-  line-height: 1.25rem;
-  text-align: left;
-  color: #fff;
-  background: linear-gradient(to top, rgba(0,0,0,.62), rgba(0,0,0,0));
-  text-shadow: 0 2px 10px rgba(0,0,0,.45);
-}
-
-/* =========
-   Copy block (readable width; left-aligned text)
-   ========= */
-.hs-copy{
-  max-width: 105ch;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.hs-copy p{
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin: 0 0 1rem;
-  opacity: 0.95;
-}
-
-/* =========
-   Buttons
-   ========= */
-.hs-button-row{
-  display: flex;
-  gap: .75rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 1.25rem;
-}
-
-.hs-button--ghost{
-  background: transparent !important;
-  border: 1px solid currentColor;
-}
-
-/* =========
-   Mobile tweaks
-   ========= */
-@media (max-width: 700px) {
-  .mdx-hero{
-    padding: 2.25rem 1rem 1.5rem;
-  }
-
-  /* Allow title row to wrap nicely */
-  .hs-title-row{
-    
-    flex-direction: column;
-    gap: 0.15em;
-    margin-bottom: 0.35em;
-    text-align: center;
-  }
-
-  /* Keep paragraphs readable on mobile */
-  .hs-copy{
-    text-align: left;
-  }
-  
-  /* Make the logo a bit larger when stacked */
-  .hs-logo{
-    width: 1.25em;
-    height: 1.25em;
-    transform: none; /* optional: remove baseline tweak */
-  }
-
-  .md-typeset .hs-title-h1{
-    text-align: center;
-  }
-
-  .hs-tagline{
-    text-align: center;
-  }
-}
-
-  </style>
 {% endblock %}
 
 {% block tabs %}
   {{ super() }}
 
-  <section class="mdx-container">
-    <div class="md-grid md-typeset">
-      <div class="mdx-hero">
-  <div class="mdx-hero__content hs-hero">
-
-    <!-- Title row: logo + H1 -->
-    <div class="hs-title">
-  <div class="hs-title-row">
-    <span class="hs-logo" aria-hidden="true"></span>
-    <h1 class="hs-title-h1">Heritage Samples Registry</h1>
+  <!-- Announcement bar: empty for now, ready for news/alerts -->
+  <div class="hs-announce-bar" id="hsAnnounceBar">
+    <!-- Future announcements go here, e.g.:
+    <p>🔔 Survey now open — <a href="get_involved/register-interest/">Register your interest</a></p>
+    -->
   </div>
 
-  <p class="hs-tagline">
-    Persistent identification, discovery, and sharing of heritage samples in heritage science.
-  </p>
-</div>
+  <!-- Full-width rotating banner with overlay -->
+  <div class="hs-banner" id="hsBanner"
+       data-banner-dir="{{ 'images/banner/' | url }}"
+       data-captions-url="{{ 'images/banner/captions.csv' | url }}"
+       data-interval-ms="9000"
+       data-fade-ms="1200">
 
+    <!-- Image layers -->
+    <div class="hs-banner__layer is-visible" id="hsBannerA"></div>
+    <div class="hs-banner__layer" id="hsBannerB"></div>
 
-    <!-- Banner -->
-    <div class="hs-banner" id="hsBanner"
-         data-banner-dir="{{ 'images/banner/' | url }}"
-         data-captions-url="{{ 'images/banner/captions.csv' | url }}"
-         data-interval-ms="9000"
-         data-fade-ms="1200">
-      <div class="hs-banner__layer is-visible" id="hsBannerA"></div>
-      <div class="hs-banner__layer" id="hsBannerB"></div>
-      <div class="hs-banner__caption" id="hsBannerCaption">Loading…</div>
+    <!-- Centred welcome overlay -->
+    <div class="hs-banner__overlay">
+      <div class="hs-banner__overlay-inner">
+        <h1 class="hs-banner__title">Welcome to the Heritage Samples Registry</h1>
+        <p class="hs-banner__subtitle">Persistent identification, discovery, and sharing of heritage samples in heritage science.</p>
+      </div>
     </div>
 
-    <!-- Body copy in a readable column -->
+    <!-- Caption: bottom-right -->
+    <div class="hs-banner__caption" id="hsBannerCaption"></div>
+  </div>
+
+  <!-- Buttons: sit just below the banner -->
+  <div class="md-grid md-typeset">
+    <div class="hs-button-row">
+      <a href="about/about-registry/" class="md-button md-button--primary">About the Registry</a>
+      <a href="get_involved/register-interest/" class="md-button">Register Your Interest</a>
+      <a href="get_involved/consortium-vision/" class="md-button hs-button--ghost">Consortium Vision</a>
+    </div>
+
+    <!-- Text block -->
     <div class="hs-copy">
+      <h2 class="hs-copy__title">About this initiative</h2>
       <p>
         The <b>Heritage Samples Registry</b> is an emerging international initiative to support the persistent
         identification, discovery, and sharing of information about material samples in the context of heritage
@@ -243,38 +55,12 @@ body[data-md-color-scheme="slate"] .hs-logo{
         physical specimens, are valuable research assets that underpin heritage science, conservation, and more
         general research worldwide.
       </p>
-
       <p>
         The Registry aims to make the existence of these samples <b>findable, citable, and consistently documented</b>,
         enabling researchers and institutions to connect local sample records with global research outputs.
       </p>
     </div>
-
-    <!-- CTAs -->
-    <div class="hs-button-row">
-      <a href="welcome" class="md-button md-button--primary">Learn More</a>
-      <a href="https://github.com/HeritageSamples/heritagesamples.org/issues" class="md-button">Get Involved</a>
-      <!-- Optional extras (demoted) -->
-      <a href="registry" class="md-button hs-button--ghost">Search Registry</a>
-      <a href="docs" class="md-button hs-button--ghost">Documentation</a>
-    </div>
-
-    <!-- If you need more than ~4 actions, switch to quick links -->
-    <!--
-    <p class="hs-quicklinks">
-      Quick links:
-      <a href="registry">Search</a> ·
-      <a href="schemas">Schemas</a> ·
-      <a href="partners">Partners</a> ·
-      <a href="contact">Contact</a>
-    </p>
-    -->
-
   </div>
-</div>
-
-    </div>
-  </section>
 
   <script>
     (function () {
@@ -290,11 +76,10 @@ body[data-md-color-scheme="slate"] .hs-logo{
       const intervalMs = parseInt(banner.getAttribute("data-interval-ms") || "9000", 10);
       const fadeMs = parseInt(banner.getAttribute("data-fade-ms") || "1200", 10);
 
-      // Make the JS transition duration match data-fade-ms
       layerA.style.transitionDuration = (fadeMs / 1000) + "s";
       layerB.style.transitionDuration = (fadeMs / 1000) + "s";
 
-      let items = []; // { filename, caption }
+      let items = [];
       let currentIndex = -1;
       let showingA = true;
       let timer = null;
@@ -305,20 +90,13 @@ body[data-md-color-scheme="slate"] .hs-logo{
 
       function parseCaptions(text) {
         const lines = text.split("\n").map(normaliseLine).filter(Boolean);
-
         const out = [];
         for (const line of lines) {
-          // Ignore comment lines like "//..." or "#..."
           if (line.startsWith("//") || line.startsWith("#")) continue;
-
-          // You said "TAB" — but allow any whitespace run as a separator
-          // (so "filename<tab>caption" or "filename  caption" both work)
-          const parts = line.split(/\t+|\s{2,}/); // tabs OR 2+ spaces
+          const parts = line.split(/\t+|\s{2,}/);
           if (parts.length < 2) continue;
-
           const filename = parts.shift().trim();
           const caption = parts.join(" ").trim();
-
           if (!filename) continue;
           out.push({ filename, caption });
         }
@@ -328,9 +106,7 @@ body[data-md-color-scheme="slate"] .hs-logo{
       function pickNextIndex() {
         if (items.length === 0) return -1;
         if (items.length === 1) return 0;
-
         let next = currentIndex;
-        // avoid immediate repeats
         while (next === currentIndex) {
           next = Math.floor(Math.random() * items.length);
         }
@@ -348,27 +124,20 @@ body[data-md-color-scheme="slate"] .hs-logo{
 
       async function showIndex(nextIndex) {
         if (nextIndex < 0 || nextIndex >= items.length) return;
-
         const { filename, caption } = items[nextIndex];
         const imgUrl = bannerDir + filename;
-
         try {
           await preloadImage(imgUrl);
         } catch (e) {
-          // If an image is missing, skip it and try another
           console.warn(e);
           return;
         }
-
         const incoming = showingA ? layerB : layerA;
         const outgoing = showingA ? layerA : layerB;
-
         incoming.style.backgroundImage = `url("${imgUrl}")`;
         captionEl.textContent = caption || "";
-
         incoming.classList.add("is-visible");
         outgoing.classList.remove("is-visible");
-
         showingA = !showingA;
         currentIndex = nextIndex;
       }
@@ -386,32 +155,24 @@ body[data-md-color-scheme="slate"] .hs-logo{
           captionEl.textContent = "Banner captions URL not set.";
           return;
         }
-
         try {
           const res = await fetch(captionsUrl, { cache: "no-store" });
           if (!res.ok) throw new Error("HTTP " + res.status + " fetching captions file");
           const text = await res.text();
-
           items = parseCaptions(text);
-
           if (!items.length) {
             captionEl.textContent = "No banner images found in captions file.";
             return;
           }
-
-          // Start with a random image
           const first = Math.floor(Math.random() * items.length);
           await showIndex(first);
           startRotation();
-
         } catch (e) {
           console.error(e);
           captionEl.textContent = "Failed to load banner captions.";
         }
       }
 
-      // Material for MkDocs uses instant navigation; re-init after navigation events too.
-      // This avoids “works on first load but not after clicking”.
       const initOncePerPage = () => init();
       document.addEventListener("DOMContentLoaded", initOncePerPage);
       document.addEventListener("navigation:load", initOncePerPage);
