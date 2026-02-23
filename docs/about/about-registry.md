@@ -1,103 +1,25 @@
 # About the Heritage Samples Registry
 
-<img style="float: right" hspace="20" width="128px" src="../../images/hs-logo_v1.3-dark.png"/>
+<img style="float: right; border: 2px solid #2b2d60; border-radius: 6px; padding: 6px;" hspace="20" width="128px" src="../../images/hs-logo_v1.3-dark.png"/>
 
-The **Heritage Sample Registry (HSR)** is a collaborative initiative to create a sustainable and interoperable registry for heritage samples, built on the [**International Generic Sample Number (IGSN)**](https://ev.igsn.org/) system. Each IGSN is a [**Digital Object Identifier (DOI)**](https://www.doi.org/), providing a persistent, globally resolvable reference that connects physical samples to the international DOI network and supports reliable cross-referencing in publications and data resources.
+The **Heritage Samples Registry (HSR)** is an emerging international initiative to support the persistent identification, discovery, and sharing of information about physical samples in heritage science. These samples, including paint cross-sections, material fragments, and reference standards, are among the most valuable and irreplaceable assets in conservation research. They are analysed, reused, and reinterpreted across institutions and over decades, yet they rarely carry consistent identifiers that would allow researchers to reliably trace their history or connect them to related publications and datasets.
 
-Developed within the framework of [**E-RIHS (European Research Infrastructure for Heritage Science)**](https://www.e-rihs.eu/), the work draws on developments begun under [**IPERION HS**](https://www.iperionhs.eu/) and is now supported through [**ECHOES**](https://www.echoes-eccch.eu/) and [**RICHeS**](https://www.riches.ukri.org/). The HSR will provide a common mechanism for the identification and citation of physical heritage samples, beginning with **paint cross-sections**. Each sample will be assigned a unique IGSN and a minimal descriptive record, enabling it to be referenced unambiguously across multiple systems and publications.
+The HSR addresses this directly. Each sample registered in the system is assigned a unique **[IGSN (International Generic Sample Number)](https://ev.igsn.org/)**, which is also a **DOI (Digital Object Identifier)** -- the same type of persistent identifier used for academic publications. This gives every sample a stable, globally resolvable reference that can be cited in research outputs and linked across systems, regardless of where the sample is held or how it is documented locally.
 
-The registry will form the foundation for **digital twin representations** of heritage samples, providing a persistent link between the physical sample and its digital surrogates, including analytical data and related documentation held elsewhere.
+The registry provides a **minimal descriptive record** for each sample -- enough to make it findable and citable -- while leaving detailed analytical data, images, and documentation where they already exist, in institutional repositories, project platforms, and publications. Participation does not require institutions to move or duplicate their data.
 
-```mermaid
----
-config:
-  layout: fixed
----
-flowchart LR
-    A@{ label: "<img src=\"https://heritagesamples.github.io/heritagesamples.org/images/sample_vial.jpg\" width=\"64\"><br>Physical Heritage Sample" } --> HSR@{ label: "<img src=\"https://heritagesamples.github.io/heritagesamples.org/images/hs-logo_v1.3-dark.png\" width=\"72\"><br>Heritage Samples Registry<br>IGSN–DOI Assignment" }
-    HSR --> B@{ label: "<img src=\"https://heritagesamples.github.io/heritagesamples.org/images/metadata-card.png\" width=\"64\"><br>Minimal Core Metadata Record" } & IGSN@{ label: "<img src=\"https://heritagesamples.github.io/heritagesamples.org/images/igsn.jpg\" width=\"64\"><br>IGSN-DOI Identifier" }
-    IGSN --> DOI@{ label: "<img src=\"https://upload.wikimedia.org/wikipedia/commons/1/11/DOI_logo.svg\" width=\"64\"><br>DOI Infrastructure" }
-    B --> IGSN
-    C@{ label: "<img src=\"https://heritagesamples.github.io/heritagesamples.org/images/data.png\" width=\"64\"><br>External Data<br>Images, Analysis, Documentation" } -. references .-> IGSN
-    D@{ label: "<img src=\"https://heritagesamples.github.io/heritagesamples.org/images/publications.png\" width=\"64\"><br>Publications &amp; Reports" } -. references .-> IGSN
-    E@{ label: "<img src=\"https://heritagesamples.github.io/heritagesamples.org/images/DigitalTwin.png\" width=\"64\"><br>Digital Twin Representations" } -. references .-> IGSN
-    C -. may also have .-> DOI
-    D -. may also have .-> DOI
-    E -. may also have .-> DOI
+## Why this matters
 
-    A@{ shape: rect}
-    HSR@{ shape: rect}
-    B@{ shape: rect}
-    IGSN@{ shape: rect}
-    DOI@{ shape: rect}
-    C@{ shape: rect}
-    D@{ shape: rect}
-    E@{ shape: rect}
-     A:::object
-     HSR:::digital2
-     B:::dims2
-     IGSN:::name2
-     DOI:::digital2
-     C:::infoobj
-     D:::document
-     E:::infoobj
-    classDef object stroke:#2C5D98,fill:#2C5D98,color:#FFFFFF,rx:5px,ry:5px,font-size:18px,font-weight:bold
-    classDef digital2 stroke:#999,fill:#eee,color:black,rx:5px,ry:5px,font-size:18px,font-weight:bold
-    classDef name2 stroke:orange,fill:#FEF3BA,color:black,rx:20px,ry:20px,font-size:18px,font-weight:bold
-    classDef infoobj stroke:#907010,fill:#fffa40,color:black,rx:20px,ry:20px,font-size:18px,font-weight:bold
-    classDef document stroke:#2C5D98,fill:#33B0FF,color:#2C5D98,rx:5px,ry:5px,font-size:18px,font-weight:bold
-    classDef dims2 stroke:black,fill:#c6c6c6,color:black,rx:20px,ry:20px,font-size:18px,font-weight:bold
-```
+Heritage science depends on small physical samples that are often unique and impossible to replace. A paint cross-section taken from a fifteenth-century altarpiece, or a mortar sample from a medieval building, may be studied multiple times over many years by different researchers in different countries.
 
-## **Purpose and Rationale**
+Within a single institution it is sometimes possible to trace a sample's history, but this often relies on local documentation practices or the personal memory of staff, and it becomes harder as time passes and people move on. Across institutions and in the wider published literature the challenge is much greater. Connecting work done on the same sample across historic publications can be very difficult, and in many cases is simply not possible without a shared, persistent identifier.
 
-Heritage science increasingly depends on access to data from small but significant physical samples that are analysed, reused, and reinterpreted across institutions and decades of research. Despite their importance, these samples often lack consistent public identifiers, making it difficult to trace their provenance, usage, or analytical history.
+The HSR is designed to make this easier and, over time, to make it routine. By giving each sample a stable reference point, the registry creates the identification layer that connects physical samples to the broader digital ecosystem of heritage science -- linking them to related analyses, publications, datasets, and in time to **digital twin representations** that bring together everything known about a given object or sample.
 
-The HSR addresses this problem by:
+## How the registry fits into the broader landscape
 
-- Assigning a **persistent IGSN-DOI** to each sample, ensuring long-term traceability and interoperability.
+The concepts behind the HSR and the technical approaches it uses were developed and refined across a series of earlier projects within the [**E-RIHS (European Research Infrastructure for Heritage Science)**](https://www.e-rihs.eu/) framework, including work carried out under [**IPERION HS (Integrated Platform for the European Research Infrastructure ON Heritage Science)**](https://cordis.europa.eu/project/id/871034). The work to specifically design and build the registry is being carried out through the [**ECHOES (European Cloud for Heritage OpEn Science)**](https://www.echoes-eccch.eu/) project, with additional support from the [**HSDS (Heritage Science Data Service)**](https://hsds.ac.uk/) project within the [**RICHeS (Research Infrastructure for Conservation and Heritage Science)**](https://www.riches.ukri.org/) programme.
 
-- Providing a **shared metadata structure** aligned with the default IGSN and DataCite schemas, with limited heritage-specific extensions (such as sample location on an object or sample type).
+The HSR draws on guidance from the [IGSN organisation](https://ev.igsn.org/) and the [DataCite IGSN metadata recommendations](https://support.datacite.org/docs/igsn-id-metadata-recommendations), and is actively engaging with the [IGSN DataCite Archaeology and Cultural Heritage Community of Practice](https://ev.igsn.org/communities/archaeology) with the aim of aligning approaches and contributing to shared standards for sample identification across the cultural heritage sector. We are also exploring connections with the [ICCROM Register of Heritage Samples Archives](https://samplearchives.iccrom.org/) (International Centre for the Study of the Preservation and Restoration of Cultural Property), a complementary initiative focused on the documentation and accessibility of heritage sample archives.
 
-- Supporting the creation of **digital twins**, linking physical samples to their related digital resources in external systems.
-
-- Offering a **federated registry** that allows institutions to register and manage identifiers locally while contributing to an international reference index.
-
-- Enabling connections to institutional collection management systems and open research repositories through standard APIs and linked data practices.
-
-It is important to emphasise that the registry will not host analytical results, publications, or detailed documentation. Its sole function is to provide authoritative identifiers and core metadata to support interoperability across the broader digital ecosystem of heritage science.
-
-## Acknowledgement
-
-This project was setup as part of the work of the following projects:
-
-### The Horizon Europe [E-RIHS IP](https://www.e-rihs.eu/the-project/) project
-
-[<img width="256px" src="https://e-rihs.io/graphics/e-rihs-eric-logo_ai.png" alt="E-RIHS IP Logo">](https://www.e-rihs.eu)<br/>
-
-- [E-RIHS IP has received funding from the European Union’s Horizon Europe call HORIZON-INFRA-2021-DEV-02, Grant Agreement n.101079148.](https://cordis.europa.eu/project/id/101079148)
-
-### The Horizon Europe [ECHOES](https://www.echoes-eccch.eu/) project
-
-[<img width="256px" src="https://www.echoes-eccch.eu/wp-content/uploads/2024/07/ECHOES_Logo.png" alt="ECHOES Logo">](https://www.echoes-eccch.eu/)<br/>
-
-- [ECHOES is a project funded by the European Commission under Grant Agreement n.101157364 – ECHOES.](https://cordis.europa.eu/project/id/101157364)
-- [ECHOES is a project funded by UK Research and Innovation (UKRI) under the UK government’s Horizon Europe funding guarantee n.10110142 & n.10110466.]()
-
-### The [UKRI RICHeS](https://www.riches.ukri.org/) [HSDS](https://hsds.ac.uk/) project
-
-[<img width="256px" src="https://hsds.ac.uk/wp-content/uploads/2024/09/HSDS_Blue-and-black_1920px.png" alt="HSDS Logo">](https://hsds.ac.uk/)<br/>
-
-- [HSDS is a project funded by UK Research and Innovation (UKRI) as part of the RICHeS Programme.](https://www.riches.ukri.org/)
-
-### The [H-SEARCH](https://rdm.kikirpa.be/projects/h-search/) project
-
-[<img width="256px" src="https://rdm.kikirpa.be/wp-content/uploads/2025/01/H-SEARCH-colour-logo.png" alt="H-SEARCH Logo">](https://rdm.kikirpa.be/projects/h-search/)<br/>
-
-- [H-SEARCH is a project funded by the Belgian Science Policy Office (BELSPO) as part of the IMPULS INFRA Programme, grant number IM/RT/23/H-SEARCH.](https://www.belspo.be/)
-
-### [NFDI4Objects](https://www.nfdi4objects.net/) project
-
-[<img width="256px" src="https://community.nfdi4objects.net/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOMlo0Y0hoNmJ6QTFPR051Y0RNMWVHaHRZMjV5WkcxeU9IVXpad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpBeVgxWmxjbXhoZFdaZlEyeGhhVzFmYTNWeWVsODFNREJ3ZUM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KekF5WDFabGNteGhkV1pmUTJ4aGFXMWZhM1Z5ZWw4MU1EQndlQzV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjUtMTItMTFUMTI6MDM6NDguODY1WiIsInB1ciI6ImJsb2Jfa2V5In19--175586c9ac556ae1110cac1824c16add3be43134/02_Verlauf_Claim_kurz_500px.png" alt="NFDI4Objects Logo">](https://www.nfdi4objects.net/)<br/>
-
-- [NFDI4Objects is funded by Deutsche Forschungsgemeinschaft (DFG) as a consortium of the national research data infrastructure (NFDI) in Germany, project number 50183640](https://gepris.dfg.de/gepris/projekt/501836407?context=projekt&task=showDetail&id=50183640)
+The registry is designed to complement existing collection management systems and research repositories rather than replace them, connecting to international infrastructure through standard APIs and linked data practices. It is beginning with **paint cross-sections** as its initial focus, working with core institutional partners to develop and refine workflows before broadening to other sample types across the heritage and **GLAM (Galleries, Libraries, Archives and Museums)** sectors.
