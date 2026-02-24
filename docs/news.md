@@ -15,7 +15,7 @@ Work will now focus on pilot testing, community engagement, and refining guidanc
 
 ---
 
-## Template for future updates
+<!-- ## Template for future updates
 
 ### YYYY-MM-DD — Title of update
 
@@ -26,3 +26,4 @@ Optional additional details can be included as a short list:
 - key activity or outcome  
 - related collaboration or initiative  
 - next steps or expected follow-up
+-->

@@ -52,5 +52,6 @@ For a broader introduction to persistent identifiers and their role in research 
 ---
 
 **See also:**  
+
 - [How we use IGSNs](how-we-use-igsn.md)  
 - [Goals & Scope](goals-scope.md)

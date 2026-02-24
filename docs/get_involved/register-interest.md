@@ -37,5 +37,6 @@ Your interest and feedback will help shape how the Registry develops and how it 
 ---
 
 **See also:**  
+
 - [Roadmap](roadmap.md)  
 - [How we use IGSNs](../about/how-we-use-igsn.md)
