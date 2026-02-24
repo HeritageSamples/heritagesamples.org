@@ -30,8 +30,8 @@ theme:
     - navigation.top
     - content.tabs.link
     - content.code.copy
-    - search.highlight
-    - search.share
+#    - search.highlight
+#    - search.share
     - toc.integrate
 
   # Placeholder for future branding
@@ -66,7 +66,7 @@ nav:
   #    - Institutional setup & integration: instructions/institutional-setup.md
 
 plugins:
-  - search
+#  - search
   
 extra_css:
   - stylesheets/extra.css

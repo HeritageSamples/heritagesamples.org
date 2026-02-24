@@ -27,6 +27,12 @@
 .md-content h3 { margin-top: 0em; }
 
 /* =========================================================
+   Hide Search Option
+   ========================================================= */
+.md-search { display: none; }
+.md-header__option  { display: none; }
+
+/* =========================================================
    Homepage layout: suppress Material chrome on index only
    ========================================================= */
 body.homepage .md-header { position: initial; }
