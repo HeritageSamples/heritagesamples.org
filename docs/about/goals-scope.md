@@ -57,7 +57,9 @@ Extension to additional domains can be implemented relatively quickly, but will 
 
 The long-term success of the Registry depends on collaboration across institutions, disciplines, and countries. Its development is therefore intended to be iterative and community-informed, with priorities shaped by practical use cases and shared infrastructure needs within the heritage science domain.
 
-To learn more about the collaborative model and potential audiences for the Registry, see:
+To learn more about the collaborative model and potential audiences for the Registry
 
-- [Consortium Vision](../get_involved/consortium-vision/)
-- [Who can benefit?](../get_involved/who-can-benefit/)
+**See also:**
+
+- [Consortium Vision](../get_involved/consortium-vision.md)
+- [Who can benefit?](../get_involved/who-can-benefit.md)

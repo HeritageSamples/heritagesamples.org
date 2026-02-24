@@ -48,3 +48,9 @@ In this way, IGSNs play a similar role for physical samples as DOIs do for publi
 For a broader introduction to persistent identifiers and their role in research infrastructure, see the guidance developed through the AHRC-funded Towards a National Collection programme:
 
 - [Persistent Identifier (PID) Resources](https://tanc-ahrc.github.io/PIDResources/)
+
+---
+
+**See also:**  
+- [How we use IGSNs](how-we-use-igsn.md)  
+- [Goals & Scope](goals-scope.md)

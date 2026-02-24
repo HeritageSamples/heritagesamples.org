@@ -239,3 +239,19 @@ body.homepage .md-content { display: none; }
     padding: 0 1.25rem;
   }
 }
+
+.md-typeset .mermaid {
+  text-align: center;
+}
+
+/* Make admonition body text same size as main content */
+.md-typeset .admonition,
+.md-typeset details {
+  font-size: 1em;
+}
+
+/* Ensure title also matches body size nicely */
+.md-typeset .admonition-title {
+  font-size: 1em;
+  font-weight: 600;
+}

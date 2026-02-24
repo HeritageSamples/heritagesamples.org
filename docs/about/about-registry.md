@@ -23,3 +23,12 @@ The concepts behind the HSR and the technical approaches it uses were developed 
 The HSR draws on guidance from the [IGSN organisation](https://ev.igsn.org/) and the [DataCite IGSN metadata recommendations](https://support.datacite.org/docs/igsn-id-metadata-recommendations), and is actively engaging with the [IGSN DataCite Archaeology and Cultural Heritage Community of Practice](https://ev.igsn.org/communities/archaeology) with the aim of aligning approaches and contributing to shared standards for sample identification across the cultural heritage sector. We are also exploring connections with the [ICCROM Register of Heritage Samples Archives](https://samplearchives.iccrom.org/) (International Centre for the Study of the Preservation and Restoration of Cultural Property), a complementary initiative focused on the documentation and accessibility of heritage sample archives.
 
 The registry is designed to complement existing collection management systems and research repositories rather than replace them, connecting to international infrastructure through standard APIs and linked data practices. It is beginning with **paint cross-sections** as its initial focus, working with core institutional partners to develop and refine workflows before broadening to other sample types across the heritage and **GLAM (Galleries, Libraries, Archives and Museums)** sectors.
+
+---
+
+**See also:**  
+
+- [What is an IGSN?](what-is-igsn.md)
+- [How we use IGSNs](how-we-use-igsn.md)
+- [Goals & Scope](goals-scope.md)  
+- [Register your interest](../get_involved/register-interest.md)

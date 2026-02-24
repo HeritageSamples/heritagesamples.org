@@ -19,6 +19,10 @@ Registering early is encouraged. The record can be updated later as more documen
 
 The Registry aims to keep registration lightweight.
 
+!!! note "Minimum information required"
+    An IGSN can be assigned once the minimum descriptive metadata is available.  
+    Detailed analytical data and documentation can remain in existing institutional systems.
+
 ### Minimum information (to create an IGSN record)
 
 - A **local sample label or code** used by the custodian institution
@@ -82,3 +86,9 @@ These links can be added and extended over time.
 ## Sample relationships (optional)
 
 In many research workflows a sample may be subdivided, mounted, re-mounted, partially consumed, or otherwise processed. Where relevant, the Registry can capture simple relationships between samples (for example, a subsample derived from a parent sample) to support traceability over time.
+
+---
+
+**See also:**  
+- [Goals & Scope](goals-scope.md)  
+- [Register your interest](../get_involved/register-interest.md)
