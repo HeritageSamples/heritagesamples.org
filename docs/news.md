@@ -4,6 +4,28 @@ This page provides brief updates on the development of the Heritage Samples Regi
 
 Updates are listed in reverse chronological order, with the most recent items first.
 
+<!-- 
+
+## Template for future updates
+
+Please add new updates so they are displayed in reverse data order.
+
+---
+
+### YYYY-MM-DD — Title of update
+
+Short paragraph describing the development, event, or milestone.
+
+Optional additional details can be included as a short list:
+
+- key activity or outcome  
+- related collaboration or initiative  
+- next steps or expected follow-up
+
+---
+
+-->
+
 ---
 
 ## 2026-02-24 — Initial website launch (draft)
@@ -15,15 +37,4 @@ Work will now focus on pilot testing, community engagement, and refining guidanc
 
 ---
 
-<!-- ## Template for future updates
 
-### YYYY-MM-DD — Title of update
-
-Short paragraph describing the development, event, or milestone.
-
-Optional additional details can be included as a short list:
-
-- key activity or outcome  
-- related collaboration or initiative  
-- next steps or expected follow-up
--->

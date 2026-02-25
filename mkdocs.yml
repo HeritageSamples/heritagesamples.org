@@ -46,6 +46,7 @@ nav:
   - Home: index.md  
   - About:
       - About the Registry: about/about-registry.md
+      - Key Definitions: about/definitions.md 
       - What is an IGSN?: about/what-is-igsn.md
       - How we use IGSNs: about/how-we-use-igsn.md
       - Goals & Scope: about/goals-scope.md
