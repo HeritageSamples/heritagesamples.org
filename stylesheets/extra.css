@@ -1,0 +1,257 @@
+/* =========================================================
+   Brand colours
+   ========================================================= */
+
+/* Light mode (default) */
+:root > * {
+  --md-primary-fg-color:        #2b2d60;
+  --md-primary-fg-color--light: #4a4d84;
+  --md-primary-fg-color--dark:  #1b1d40;
+  --md-accent-fg-color:              #fbbb11;
+  --md-accent-fg-color--transparent: rgba(251, 187, 17, 0.25);
+}
+
+/* Dark mode (slate) */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        #2b2d60;
+  --md-primary-fg-color--light: #4a4d84;
+  --md-primary-fg-color--dark:  #1b1d40;
+  --md-accent-fg-color:              #fbbb11;
+  --md-accent-fg-color--transparent: rgba(251, 187, 17, 0.25);
+}
+
+/* =========================================================
+   General heading tweaks
+   ========================================================= */
+.md-content h2 { margin-top: 0em; }
+.md-content h3 { margin-top: 0em; }
+
+/* =========================================================
+   Hide Search Option
+   ========================================================= */
+.md-search { display: none; }
+.md-header__option  { display: none; }
+
+/* =========================================================
+   Homepage layout: suppress Material chrome on index only
+   ========================================================= */
+body.homepage .md-header { position: initial; }
+body.homepage .md-main__inner { margin: 0; }
+body.homepage .md-content { display: none; }
+
+@media screen and (min-width: 60em) {
+  body.homepage .md-sidebar--secondary { display: none !important; }
+}
+@media screen and (min-width: 76.25em) {
+  body.homepage .md-sidebar--primary { display: none !important; }
+}
+
+/* =========================================================
+   Announcement bar
+   Sits between the header and the banner.
+   Empty by default; add content via the HTML comment blocks.
+   ========================================================= */
+.hs-announce-bar {
+  width: 100%;
+  min-height: 4px;           /* thin coloured rule when empty */
+  background: var(--md-accent-fg-color);
+  color: #1b1d40;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0;                /* no padding until there is content */
+  overflow: hidden;
+  transition: padding 0.2s ease;
+}
+
+/* When the bar has visible text, give it breathing room */
+.hs-announce-bar:not(:empty) {
+  padding: 0.55rem 1.5rem;
+}
+
+.hs-announce-bar a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* =========================================================
+   Full-width rotating banner
+   ========================================================= */
+.hs-banner {
+  position: relative;
+  width: 100%;
+  /* no max-width — fills the viewport */
+  height: clamp(260px, 42vw, 520px);
+  overflow: hidden;
+  background: rgba(0, 0, 0, .08);
+  /* no border-radius — full bleed */
+}
+
+.hs-banner__layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  will-change: opacity;
+}
+.hs-banner__layer.is-visible { opacity: 1; }
+
+/* =========================================================
+   Welcome overlay: centred over the image
+   ========================================================= */
+.hs-banner__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;   /* let clicks pass through to links if needed */
+  z-index: 2;
+}
+
+/*
+  --hs-overlay-width controls how wide the semi-transparent panel is.
+  100% = full-width band; 60% = narrower centred panel.
+  Change this one value to compare options.
+*/
+.hs-banner__overlay-inner {
+  --hs-overlay-width: 100%;           /* ← tweak here */
+  width: var(--hs-overlay-width);
+  background: rgba(27, 29, 64, 0.58); /* deep heritage blue, semi-transparent */
+  padding: 1.4rem 2rem;
+  text-align: center;
+}
+
+.hs-banner__title {
+  margin: 0 0 0.35em;
+  font-size: clamp(1.4rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+  text-shadow: 0 2px 8px rgba(0,0,0,.4);
+}
+
+.hs-banner__subtitle {
+  margin: 0;
+  font-size: clamp(0.85rem, 1.4vw, 1.05rem);
+  color: rgba(255,255,255,0.88);
+  line-height: 1.4;
+  text-shadow: 0 1px 6px rgba(0,0,0,.35);
+}
+
+/* =========================================================
+   Caption: bottom-right, narrow, small
+   ========================================================= */
+.hs-banner__caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  max-width: 40%;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.72rem;
+  line-height: 1.3;
+  text-align: right;
+  color: rgba(255,255,255,0.85);
+  background: linear-gradient(to left, rgba(0,0,0,.55), rgba(0,0,0,0));
+  text-shadow: 0 1px 4px rgba(0,0,0,.5);
+
+  /* Graceful truncation if caption runs unexpectedly long */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Hide caption entirely on phones to avoid overlap */
+@media (max-width: 700px) {
+  .hs-banner__caption {
+    display: none;
+  }
+}
+
+/* =========================================================
+   Buttons: sit just below the banner
+   ========================================================= */
+.hs-button-row {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1.5rem auto 0;
+  max-width: 900px;
+  padding: 0 1rem;
+}
+
+.hs-button--ghost {
+  background: transparent !important;
+  border: 1px solid currentColor;
+}
+
+/* =========================================================
+   Text block: "About this initiative"
+   ========================================================= */
+.hs-copy {
+  max-width: 105ch;
+  margin: 2rem auto 2.5rem;
+  padding: 0 1rem;
+  text-align: left;
+}
+
+.hs-copy__title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+  margin: 0 0 0.75rem;
+}
+
+.hs-copy p {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin: 0 0 1rem;
+  opacity: 0.95;
+}
+
+/* =========================================================
+   Mobile tweaks
+   ========================================================= */
+@media (max-width: 700px) {
+
+  .hs-banner__overlay-inner {
+    --hs-overlay-width: 100%;
+    padding: 1rem 1.25rem;
+  }
+
+  .hs-banner__caption {
+    max-width: 55%;
+    font-size: 0.68rem;
+  }
+
+  .hs-button-row {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1.25rem;
+  }
+
+  .hs-copy {
+    padding: 0 1.25rem;
+  }
+}
+
+.md-typeset .mermaid {
+  text-align: center;
+}
+
+/* Make admonition body text same size as main content */
+.md-typeset .admonition,
+.md-typeset details {
+  font-size: 1em;
+}
+
+/* Ensure title also matches body size nicely */
+.md-typeset .admonition-title {
+  font-size: 1em;
+  font-weight: 600;
+}
