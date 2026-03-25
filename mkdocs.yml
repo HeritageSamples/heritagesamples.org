@@ -7,6 +7,7 @@ site_url: https://heritagesamples.org/
 theme:
   name: material
   custom_dir: overrides  # Required for home.html to work
+#  generator: false 
   language: en
   logo: images/hs-logo_v1.3-light.png  
   favicon: images/favicon.png
@@ -100,3 +101,5 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+
+copyright: "2026 Heritage Samples Registry. "
