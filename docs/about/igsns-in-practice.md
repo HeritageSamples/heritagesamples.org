@@ -12,8 +12,8 @@ persistent identifier (PID) infrastructure each play once an identifier has been
 
 The Registry's primary function is to act as the authoritative source for each IGSN it
 assigns. It holds the definitive record for that identifier: which institution registered
-the sample, who holds it, and when the record was created. This is the ground truth for
-the PID.
+the sample, who holds it, and when the record was created. This record is what external 
+systems and users can rely on as the definitive point of reference for that identifier.
 
 The Registry is not primarily a browsing interface for sample information. In normal
 operation it will be accessed directly by systems, such as collection management platforms,
@@ -96,7 +96,7 @@ more visible and discoverable.
 
 | Role | Provided by |
 |---|---|
-| PID authority and ground truth | The Heritage Samples Registry |
+| PID authority and definitive source | The Heritage Samples Registry |
 | Persistent identifier in local and external systems | The IGSN, recorded alongside institutional identifiers |
 | Human-readable destination for sample information | The holding institution, or an external platform or repository |
 | Connection to publications, datasets, and the scholarly record | DataCite Commons and the wider DOI infrastructure |
