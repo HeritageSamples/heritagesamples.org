@@ -53,3 +53,9 @@ The Registry is intended as an international service, open to participation from
 Supporting organisations may include not only individual institutions, but also research infrastructures, funded projects, and national or international initiatives that share an interest in persistent identification and linking of heritage science samples.
 
 As participation expands, options for multilingual interfaces and documentation will be explored to ensure that the Registry remains accessible to a broad and diverse international user community.
+
+**See also:**  
+
+- [Using the Registry](../get_involved/using-the-registry.md)
+- [Register your interest](register-interest.md)
+

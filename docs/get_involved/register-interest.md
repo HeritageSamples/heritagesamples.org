@@ -41,3 +41,4 @@ Your interest and feedback will help shape how the Registry develops and how it 
 
 - [Roadmap](roadmap.md)  
 - [IGSNs in practice](../about/igsns-in-practice.md)
+- [Using the Registry](../get_involved/using-the-registry.md)

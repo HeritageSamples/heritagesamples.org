@@ -30,5 +30,6 @@ The registry is designed to complement existing collection management systems an
 
 - [What is an IGSN?](what-is-igsn.md)
 - [IGSNs in practice](../about/igsns-in-practice.md)
+- [Using the Registry](../get_involved/using-the-registry.md)
 - [Goals & Scope](goals-scope.md)  
 - [Register your interest](../get_involved/register-interest.md)

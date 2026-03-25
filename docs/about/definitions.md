@@ -68,3 +68,8 @@ These three concepts describe related but distinct aspects of heritage materials
 - A Heritage Sample is material that has been intentionally selected or retained for examination or analysis, regardless of whether it still physically exists.  
 
 In practice, a sample may be taken from an intact object, from a defined part or section, or from an existing fragment. The essential requirement is that the material is intentionally used for examination and that a well-supported contextual relationship to a specific or inferred heritage object can be established. This contextual linkage enables meaningful interpretation of analytical results while recognising that the level of available metadata may vary across different domains and historical circumstances.
+
+**See also:**  
+
+- [About the Registry](../about/about-registry.md)
+- [Using the Registry](../get_involved/using-the-registry.md)
