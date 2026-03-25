@@ -4,9 +4,10 @@ Institutions, researchers, and projects interested in the Heritage Samples Regis
 
 You can register your interest in two ways:
 
-[Contact us](mailto:info@heritagesamples.org){ .md-button .md-button--primary } [Complete the community survey](https://research.nationalgallery.org.uk/...){ .md-button }
+[Contact us](mailto:info@heritagesamples.org){ .md-button .md-button--primary }
+<span class="md-button md-button--disabled">Complete the community survey</span>
 
-(The survey will be available soon)
+*The survey will be available soon.*
 
 ## Who should register interest?
 
@@ -39,4 +40,4 @@ Your interest and feedback will help shape how the Registry develops and how it 
 **See also:**  
 
 - [Roadmap](roadmap.md)  
-- [How we use IGSNs](../about/how-we-use-igsn.md)
+- [IGSNs in practice](../about/igsns-in-practice.md)

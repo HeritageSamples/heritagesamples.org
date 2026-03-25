@@ -24,5 +24,5 @@ In this way, the Registry supports a broad community of heritage science practit
 
 **See also:**  
 
-- [Register your interest](register-interest.md)  
-- [How we use IGSNs](../about/how-we-use-igsn.md)
+- [Register your interest](register-interest.md)
+- [IGSNs in practice](../about/igsns-in-practice.md)

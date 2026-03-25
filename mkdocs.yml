@@ -48,12 +48,13 @@ nav:
       - About the Registry: about/about-registry.md
       - Key Definitions: about/definitions.md 
       - What is an IGSN?: about/what-is-igsn.md
-      - How we use IGSNs: about/how-we-use-igsn.md
+      - IGSNs in practices: about/igsns-in-practice.md
       - Goals & Scope: about/goals-scope.md
       - Project Team & Acknowledgements: about/project-team.md
   - Get Involved:
       - Consortium Vision: get_involved/consortium-vision.md
       - Who can benefit?: get_involved/who-can-benefit.md
+      - Using the Registry: get_involved/using-the-registry.md
       - Register Your Interest: get_involved/register-interest.md
       - Roadmap: get_involved/roadmap.md
   - News & Updates: news.md

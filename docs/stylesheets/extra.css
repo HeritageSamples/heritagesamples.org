@@ -255,3 +255,9 @@ body.homepage .md-content { display: none; }
   font-size: 1em;
   font-weight: 600;
 }
+
+.md-button--disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    pointer-events: none;
+}

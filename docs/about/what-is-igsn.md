@@ -2,9 +2,16 @@
 
 <img style="float: right; border: 2px solid #2b2d60; border-radius: 6px; padding: 6px;" hspace="20" width="128px" src="../../images/igsn.jpg"/>
 
-The **International Generic Sample Number (IGSN)** is a globally unique and persistent identifier used to reference physical samples in research. It is governed by the IGSN e.V. organisation and issued through the DataCite DOI infrastructure.
+The **International Generic Sample Number (IGSN)** is a globally unique and persistent 
+identifier used to reference physical samples in research. It is governed by the IGSN e.V. 
+organisation and issued through the DataCite DOI infrastructure. Within that infrastructure, 
+the current form of the identifier is formally referred to as an **IGSN ID**, reflecting its 
+implementation as a DOI through the IGSN and DataCite partnership. Throughout this site we 
+use the term IGSN for clarity and brevity, but the two terms refer to the same thing in 
+the context of the Heritage Samples Registry.
 
-An IGSN provides a stable, resolvable reference for a specific sample, allowing it to be unambiguously cited, discovered, and linked to related research outputs across the web.
+An IGSN provides a stable, resolvable reference for a specific sample, allowing it to be 
+unambiguously cited, discovered, and linked to related research outputs across the web.
 
 <div class="hs-button-row" style="margin: 20px 0;">
   <a class="md-button" href="https://www.igsn.org/" target="_blank">Visit the IGSN Website</a>
@@ -16,6 +23,25 @@ An IGSN provides a stable, resolvable reference for a specific sample, allowing 
 IGSNs belong to the broader family of **Persistent Identifiers (PIDs)**, which are widely used in research to ensure that key entities can be reliably referenced over time. Just as DOIs are used to identify publications and datasets, IGSNs are designed specifically to identify physical samples.
 
 Each IGSN is globally unique and remains stable even if the sample moves between institutions, is re-analysed, or is referenced in new research outputs. This persistence supports long-term traceability and reproducibility in scientific research.
+
+## IGSNs as resolvable URLs
+
+A key property of an IGSN is that it is not simply a label or code, it is a resolvable
+URL. This means that anyone who follows the identifier as a web link will be taken directly
+to a landing record for that sample. No specialist software or database access is required;
+the identifier works like any other web address.
+
+For IGSNs assigned through the Heritage Samples Registry, resolving the identifier will
+bring the user to the Registry's landing record for that sample, which provides the core
+descriptive metadata and, where available, a link to a fuller presentation of the sample
+held by the institution or an external platform.
+
+This resolvability is what distinguishes a persistent identifier from a local accession
+number or informal sample code. A local label may be meaningful within a single institution,
+but it cannot be followed as a link, cannot be discovered by external systems, and may
+become ambiguous over time. An IGSN remains stable, globally unique, and directly
+actionable as a web address, regardless of where the sample is held or how it is
+documented locally.
 
 ## What an IGSN can identify
 
@@ -53,5 +79,5 @@ For a broader introduction to persistent identifiers and their role in research 
 
 **See also:**  
 
-- [How we use IGSNs](how-we-use-igsn.md)  
+- [IGSNs in practice](../about/igsns-in-practice.md)
 - [Goals & Scope](goals-scope.md)
