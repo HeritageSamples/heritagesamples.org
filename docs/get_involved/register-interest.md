@@ -7,8 +7,6 @@ You can register your interest in two ways:
 [Contact us](mailto:info@heritagesamples.org){ .md-button .md-button--primary }
 [Complete the community survey](https://research.nationalgallery.org.uk/limesurvey/index.php/20260206){ .md-button }
 
-*The survey will be available soon.*
-
 ## Who should register interest?
 
 We welcome expressions of interest from:
