@@ -5,7 +5,7 @@ Institutions, researchers, and projects interested in the Heritage Samples Regis
 You can register your interest in two ways:
 
 [Contact us](mailto:info@heritagesamples.org){ .md-button .md-button--primary }
-<span class="md-button md-button--disabled">Complete the community survey</span>
+[Complete the community survey](https://research.nationalgallery.org.uk/limesurvey/index.php/20260206){ .md-button }
 
 *The survey will be available soon.*
 
